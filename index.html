@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flipkart Home Page</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
@@ -17,7 +18,10 @@
             <div class="search"><input type="search" placeholder="Search for products, brands and more" name="s_box" id="s_box"><span class="material-symbols-outlined">
                 search
             </span></div>
-            <div class="nav_list">
+            <div id="nav-slide" class="nav_list">
+                <span id="close_icon" class="material-symbols-outlined">
+                    close
+                    </span>
                 <ul>
                     <li><span class="button">Login</span></li>
                     <li>Become a Seller</li>
@@ -27,6 +31,9 @@
                     </span>Cart</li>
                 </ul>
             </div>
+            <span id="menu_icon" class="material-symbols-outlined">
+                menu
+                </span>
         </div>
     </nav>
 
@@ -81,8 +88,8 @@
         <p>&copy; 2007-2024 Flipkart.com</p>
     </footer>
 
-    <!-- <script src="script.js"></script> -->
-    <script src="slider.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/slider.js"></script>
 </body>
 
 </html>
