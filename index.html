@@ -62,18 +62,16 @@
         </div>
 
         <div class="slider-box">
-            <div class="btns">
-                <button onclick="slideprev()"><span style="transform: rotate(180deg);" class="material-symbols-outlined">arrow_forward_ios</span></button>
-                <button onclick="slidenext()"><span class="material-symbols-outlined">arrow_forward_ios</span></button>
-            </div>
             <div id="slider" class="slider">
-                <img src="images/slide1.webp" class="slideImg" alt="">
-                <img src="images/slide2.webp" class="slideImg" alt="">
-                <img src="images/slide3.webp" class="slideImg" alt="">
-                <img src="images/slide4.webp" class="slideImg" alt="">
-                <img src="images/slide5.webp" class="slideImg" alt="">
-                <img src="images/slide3.webp" class="slideImg" alt="">
-                <!-- <img src="images/slide6.webp" class="slideImg" alt=""> -->
+                <img src="images/slide1.webp" class="Img" alt="">
+                <img src="images/slide2.webp" class="Img" alt="">
+                <img src="images/slide3.webp" class="Img" alt="">
+                <img src="images/slide4.webp" class="Img" alt="">
+                <img src="images/slide5.webp" class="Img" alt="">
+            </div>
+            <div class="btns">
+                <button onclick="slide(0)"><span style="transform: rotate(180deg);" class="material-symbols-outlined">arrow_forward_ios</span></button>
+                <button onclick="slide(1)"><span class="material-symbols-outlined">arrow_forward_ios</span></button>
             </div>
         </div>
 
@@ -83,7 +81,8 @@
         <p>&copy; 2007-2024 Flipkart.com</p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
+    <script src="slider.js"></script>
 </body>
 
 </html>
