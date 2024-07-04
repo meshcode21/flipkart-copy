@@ -1,9 +1,11 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 $theme_color: #2874f0;
+$standard_width: 90vw;
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #f1f2f4;
@@ -80,67 +82,131 @@ nav {
     }
 }
 
-main {
-    height: 100vh;
-    width: 95vw;
+.container {
+    width: $standard_width;
     max-width: 1400px;
     margin: auto;
+}
+
+.divider-1 {
+    height: 10px;
+}
+
+.divider-2 {
+    height: 20px;
+}
+
+main {
     overflow: hidden;
-    .department_container {
-        margin: 10px auto;
-        width: 100%;
-        background: white;
+}
+
+.department_container {
+    // margin: 10px auto;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+    .dep_box {
         display: flex;
+        flex-direction: column;
         justify-content: center;
-        overflow: auto;
-        .dep_box {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            font-weight: 600;
-            color: black;
-            padding: 20px;
-            margin: 2px;
-            img {
-                width: 64px;
+        align-items: center;
+        text-decoration: none;
+        font-weight: 600;
+        color: black;
+        padding: 20px;
+        margin: 2px;
+        img {
+            width: 64px;
+        }
+    }
+}
+
+.slider-box {
+    width: inherit;
+    max-width: inherit;
+    position: relative;
+    display: grid;
+    .slider {
+        width: 100%;
+        aspect-ratio: 320/53;
+        max-width: 100%;
+        img {
+            position: absolute;
+            width: inherit;
+            max-width: inherit;
+            visibility: hidden;
+            transition: all 0.4s ease-in-out;
+        }
+    }
+    .btns {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        background: transparent;
+        display: flex;
+        justify-content: space-between;
+        button {
+            background-color: white;
+            color: rgb(92, 92, 92);
+            padding: 30px 10px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            .material-symbols-outlined {
+                font-size: 1.3em;
             }
         }
     }
-    .slider-box {
-        width: inherit;
-        max-width: inherit;
-        position: relative;
-        display: grid;
-        .slider {
-            width: 100%;
-            aspect-ratio: 320/53;
-            max-width: 100%;
-            img {
-                position: absolute;
-                width: inherit;
-                max-width: inherit;
-                visibility: hidden;
-                transition: all 0.4s ease-in-out;
-            }
+}
+
+.shop_container {
+    background-color: white;
+    padding: 10px;
+    .heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h1 {
+            font-weight: 600;
         }
-        .btns {
-            position: absolute;
-            width: 100%;
-            /* z-index: 10; */
-            top: 50%;
-            transform: translateY(-50%);
-            background: transparent;
+        span {
+            font-size: 0.8em;
+            color: white;
+            background-color: $theme_color;
+            padding: 7px;
+            border-radius: 50%;
+        }
+    }
+    .box_container {
+        overflow: auto;
+        display: flex;
+        .box {
+            margin: 10px;
+            width: 200px;
+            min-width: 200px;
+            height: 250px;
+            border: 1px solid rgb(200, 200, 200);
+            border-radius: 7px;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: space-between;
-            button {
-                display: inline-block;
-                padding: 10px 0;
-                border-radius: 0;
-                border: none;
-                color: rgb(51, 51, 51);
+            padding: 10px;
+            .image {
+                height: 80%;
+                img {
+                    height: 100%;
+                }
+            }
+            .text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                p {
+                    font-weight: 600;
+                }
             }
         }
     }
